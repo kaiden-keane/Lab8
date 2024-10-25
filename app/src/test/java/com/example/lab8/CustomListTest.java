@@ -58,4 +58,11 @@ public class CustomListTest {
         cityList.delete(city);
         assertEquals(listSize - 1, cityList.getCount()); // check that no others were
     }
+
+    @Test
+    void testCountCities() {
+        CustomList cityList = MockCityList();
+        cityList.addCity(new City("Yellowknife", "Northwest Territories"));
+        assertEquals(1, cityList.countCities()); // expects 1 item
+    }
 }
